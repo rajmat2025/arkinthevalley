@@ -1,0 +1,331 @@
+{
+  "promotions": {
+    "isActive": true,
+    "bannerText": "🎉 $100 Off — Sign a 12-Month Lease Today! 🎉",
+    "offerAmount": 100,
+    "offerDescription": "$100 off your first month when you sign a 1-year lease",
+    "leaseTermRequired": "12-month",
+    "endDate": "Limited time offer",
+    "expiresOn": "2026-09-30"
+  },
+  "community": {
+    "name": "Ark in the Valley",
+    "phone": "978-853-6279",
+    "email": "rpm2k9@gmail.com",
+    "address": "774 SH 19, Huntsville, TX 77320",
+    "officeHours": "Mon–Fri: 9AM–5PM | Sat: By appointment",
+    "unitCount": 72,
+    "facebook": "https://www.facebook.com/p/Ark-In-The-Valley-Apartments-100063900735778/"
+  },
+  "hero": {
+    "slides": [
+      {
+        "src": "/images/hero/slide-building.jpg",
+        "alt": "Full view of Ark in the Valley apartment community in Huntsville, Texas"
+      },
+      {
+        "src": "/images/hero/slide-shsu-campus.jpg",
+        "alt": "Sam Houston State University campus — just minutes from Ark in the Valley"
+      },
+      {
+        "src": "/images/hero/slide-huntsville-nature.jpg",
+        "alt": "Outdoor scenery near Huntsville State Park and Sam Houston National Forest"
+      },
+      {
+        "src": "/images/hero/slide-huntsville-downtown.jpg",
+        "alt": "College town atmosphere near Sam Houston State University in Huntsville"
+      }
+    ]
+  },
+  "arkDifference": {
+    "headline": "The Ark Difference",
+    "subheadline": "More space, more calm, and more of Huntsville at your doorstep — without the crush of a mega-complex.",
+    "stats": [
+      { "label": "Apartment Homes", "value": "72" },
+      { "label": "To SHSU", "value": "6 min" },
+      { "label": "Community Built", "value": "2021" },
+      { "label": "Move-In Special", "value": "$100 Off" }
+    ],
+    "cards": [
+      {
+        "id": "feel-home",
+        "title": "Feel @ Home",
+        "description": "Enjoy an atmosphere absent of the congestion usually found in other apartment complexes. Our calm community gives you room to breathe, recharge, and actually enjoy coming home.",
+        "highlights": ["72 spacious homes", "Quiet valley setting", "Pet-friendly living"],
+        "image": "/images/lifestyle/peaceful-home.jpg",
+        "imageAlt": "Peaceful residential lifestyle near Ark in the Valley",
+        "accent": "teal"
+      },
+      {
+        "id": "perfect-location",
+        "title": "Perfect Location",
+        "description": "On HWY 19 with quick access to SHSU, downtown Huntsville dining, Huntsville State Park, Sam Houston National Forest, and everyday essentials — all without fighting campus traffic.",
+        "highlights": ["6 min to SHSU", "5 min to downtown", "Near parks & trails"],
+        "image": "/images/lifestyle/neighborhood.jpg",
+        "imageAlt": "Scenic neighborhood setting in the Huntsville area",
+        "accent": "coral"
+      },
+      {
+        "id": "dedicated-service",
+        "title": "Dedicated Service",
+        "description": "You'll come home to the hospitality and service of a team dedicated to you. Students, professionals, and families — live alone, with a roommate, or with a group.",
+        "highlights": ["Responsive leasing team", "Online rent payments", "Student-friendly terms"],
+        "image": "/images/lifestyle/community-service.jpg",
+        "imageAlt": "Welcoming community atmosphere at Ark in the Valley",
+        "accent": "gold"
+      }
+    ]
+  },
+  "exploreHuntsville": {
+    "headline": "Explore Huntsville",
+    "subheadline": "From Sam Houston history to state park adventures — discover why residents love calling this area home.",
+    "intro": "Huntsville blends small-town charm with big Texas personality: historic landmarks, lively downtown events, lakeside trails, local BBQ, SHSU game days, and family festivals year-round. Living at Ark in the Valley puts you close to it all.",
+    "categories": [
+      {
+        "id": "outdoor",
+        "title": "Outdoor Adventures",
+        "description": "Hike and bike Sam Houston National Forest, paddle at Huntsville State Park, or unwind on forest trails just minutes from home.",
+        "image": "/images/lifestyle/outdoor-recreation.jpg",
+        "imageAlt": "Outdoor recreation near Huntsville State Park",
+        "link": "https://www.huntsvilletexas.com/264/Outdoor-Recreation",
+        "linkLabel": "Outdoor Recreation",
+        "accent": "sage"
+      },
+      {
+        "id": "food",
+        "title": "Food & Drink",
+        "description": "Discover Texas comfort food, smoky BBQ, cozy cafés, and craft brews — downtown Huntsville is full of local flavor.",
+        "image": "/images/lifestyle/food-drink.jpg",
+        "imageAlt": "Local dining and flavors in Huntsville, Texas",
+        "link": "https://www.huntsvilletexas.com/101/Food-Drink",
+        "linkLabel": "Find Local Flavors",
+        "accent": "coral"
+      },
+      {
+        "id": "history",
+        "title": "History & Museums",
+        "description": "Walk in the footsteps of General Sam Houston at memorial sites and museums that tell the story of Texas.",
+        "image": "/images/lifestyle/sam-houston-history.jpg",
+        "imageAlt": "Sam Houston historic sites in Huntsville",
+        "link": "https://www.huntsvilletexas.com/262/History-Museums",
+        "linkLabel": "History & Museums",
+        "accent": "gold"
+      },
+      {
+        "id": "culture",
+        "title": "Art & Culture",
+        "description": "Colorful murals, local galleries, campus concerts, and downtown public art — Huntsville's creative scene is vibrant and welcoming.",
+        "image": "/images/lifestyle/art-culture.jpg",
+        "imageAlt": "Art and culture in Huntsville, Texas",
+        "link": "https://www.huntsvilletexas.com/256/Art-Culture",
+        "linkLabel": "Explore the Arts",
+        "accent": "plum"
+      },
+      {
+        "id": "downtown",
+        "title": "Downtown Huntsville",
+        "description": "Stroll historic squares for boutiques, antiques, festivals like Fair on the Square, and a lively community calendar.",
+        "image": "/images/lifestyle/downtown-night.jpg",
+        "imageAlt": "Downtown Huntsville shops and nightlife",
+        "link": "https://www.huntsvilletexas.com/155/Downtown-Huntsville",
+        "linkLabel": "Shop Local",
+        "accent": "sky"
+      },
+      {
+        "id": "shsu",
+        "title": "Sam Houston State",
+        "description": "Cheer on the Bearkats, explore campus landmarks, and tap into the energy of one of Texas's most spirited university towns.",
+        "image": "/images/lifestyle/campus-life.jpg",
+        "imageAlt": "Sam Houston State University campus life",
+        "link": "https://www.huntsvilletexas.com/294/Bearkat-Game-Days",
+        "linkLabel": "Visit SHSU",
+        "accent": "teal"
+      }
+    ]
+  },
+  "locationContent": {
+    "headline": "Location",
+    "subheadline": "Conveniently on HWY 19 — close to campus, downtown, outdoor recreation, and healthcare.",
+    "proximityPoints": [
+      {
+        "name": "Sam Houston State University",
+        "time": "6 min drive",
+        "distance": "2.4 mi",
+        "detail": "Campus, athletics, and Bearkat spirit without the congestion of on-campus housing."
+      },
+      {
+        "name": "Downtown Huntsville",
+        "time": "5 min drive",
+        "detail": "Dining, shopping, antiques, murals, and community events on the square."
+      },
+      {
+        "name": "Huntsville State Park",
+        "time": "Short drive",
+        "detail": "Lake Raven, hiking trails, paddling, and weekend outdoor escapes."
+      },
+      {
+        "name": "Sam Houston Memorial Museum",
+        "time": "Nearby",
+        "detail": "Historic homes and exhibits celebrating General Sam Houston's legacy."
+      },
+      {
+        "name": "Sam Houston National Forest",
+        "time": "Short drive",
+        "detail": "Miles of pine forest trails for hiking, biking, and nature breaks."
+      },
+      {
+        "name": "Huntsville Memorial Hospital",
+        "time": "8 min drive",
+        "detail": "Healthcare and emergency services within easy reach."
+      }
+    ]
+  },
+  "leasingInfo": {
+    "utilitiesIncluded": ["Water", "Sewer", "Trash", "Cable", "Internet"],
+    "petPolicy": {
+      "allowed": true,
+      "notes": "Pet-friendly — breed restrictions, weight limits, and additional fees may apply."
+    },
+    "leaseTerms": ["12-month", "Student-friendly terms available — ask our leasing team"]
+  },
+  "floorPlans": [
+    {
+      "id": "1-bed-1-bath",
+      "name": "1 Bedroom, 1 Bathroom",
+      "sizeSqFt": 575,
+      "baseRent": 875,
+      "rentRange": "$875–$900",
+      "deposit": 500,
+      "isAvailable": true,
+      "availableUnitsCount": 2,
+      "features": [
+        "One year lease includes water, sewer & high-speed internet",
+        "Spacious open layout",
+        "Full kitchen appliances",
+        "Quiet community setting"
+      ],
+      "image": "/images/floorplans/1bed.jpg"
+    },
+    {
+      "id": "2-bed-2-bath",
+      "name": "2 Bedrooms, 2 Bathrooms",
+      "sizeSqFt": 907,
+      "baseRent": 1200,
+      "rentRange": "$1,200",
+      "deposit": 500,
+      "isAvailable": true,
+      "availableUnitsCount": 1,
+      "features": [
+        "One year lease includes water, sewer & high-speed internet",
+        "Split-bedroom layout ideal for roommates",
+        "Full kitchen appliances",
+        "Two full bathrooms"
+      ],
+      "image": "/images/floorplans/2bed.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/images/gallery/exterior-01.jpg",
+      "alt": "Ark in the Valley apartment building exterior view"
+    },
+    {
+      "src": "/images/gallery/exterior-02.jpg",
+      "alt": "Ark in the Valley community building and grounds"
+    },
+    {
+      "src": "/images/gallery/entry-01.jpg",
+      "alt": "Apartment entry and exterior details at Ark in the Valley"
+    },
+    {
+      "src": "/images/gallery/kitchen-01.jpg",
+      "alt": "Kitchen with full appliances at Ark in the Valley"
+    },
+    {
+      "src": "/images/gallery/interior-01.jpg",
+      "alt": "Apartment living space at Ark in the Valley"
+    },
+    {
+      "src": "/images/gallery/living-02.jpg",
+      "alt": "Spacious apartment living area at Ark in the Valley"
+    },
+    {
+      "src": "/images/gallery/grounds-01.jpg",
+      "alt": "Scenic view near Ark in the Valley in Huntsville, Texas"
+    },
+    {
+      "src": "/images/gallery/community-01.jpg",
+      "alt": "Ark in the Valley apartment community grounds"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How to reach service/maintenance?",
+      "a": "Our apartment is managed by DCM (Davis Construction Management) Inc. 101 Hidden Valley Circle Huntsville, TX 77340. 936-291-6868 (Office) 936-581-0881 (Cell) email: kristy@dcmhuntsville.com"
+    },
+    {
+      "q": "Are Private Bathrooms available?",
+      "a": "Yes, all one-bedroom apartments are designed with \"In Suite\" Bathrooms and Our two bedroom apartment comes with separate attached bathrooms to the Bedrooms."
+    },
+    {
+      "q": "When do the contract start and ends?",
+      "a": "The standard term begins in August 3rd weeks and ends on August 2nd week. Alternative days also available - Please contact the leasing office."
+    },
+    {
+      "q": "Can I pay by Credit Cards?",
+      "a": "Yes, Residents can pay online 24 hrs per day, by Credit Card or ACH Electronic Checking. Ark in the Valley also offers automatic payment either by Credit Card or Checking Account - Just fill out one page, one time and payments will be made automatically. Convenience fee applied for Credit Card and Debit Card payments."
+    },
+    {
+      "q": "What are the policies on pets, smoking, and Guest?",
+      "a": "The Ark In the Valley is a pet-friendly community, with some restrictions. All pets must be registered with management and a pet fee and deposit paid; dogs must be kept on leashes when outside. All Indoor areas of Ark in the Valley are smoke-free. Guests are welcome at all times, Overnight guests are welcome with limits on the number of days and guest. Guest parking is limited."
+    }
+  ],
+  "testimonials": {
+    "headline": "What People Say",
+    "subheadline": "Residents love the calm, the commute, and the community — here's what they're sharing.",
+    "reviews": [
+      {
+        "id": "maya-r",
+        "name": "Maya R.",
+        "role": "SHSU Graduate Student",
+        "quote": "I needed somewhere quiet enough to actually study after long lab days. Ark in the Valley is peaceful without feeling isolated — I'm on campus in six minutes, and having internet included in rent was a huge win.",
+        "rating": 5
+      },
+      {
+        "id": "jordan-chris",
+        "name": "Jordan & Chris T.",
+        "role": "2-Bedroom Roommates",
+        "quote": "The split layout is perfect for roommates. We each have our own bathroom, the kitchen is legitimately full-size, and maintenance actually shows up when you call. Way less drama than our old mega-complex.",
+        "rating": 5
+      },
+      {
+        "id": "elena-s",
+        "name": "Elena S.",
+        "role": "Young Professional",
+        "quote": "After two years in a crowded student complex, this place feels like a breath of fresh air. Parking is easy, evenings are calm, and I still get downtown Huntsville in five minutes for dinner with friends.",
+        "rating": 5
+      },
+      {
+        "id": "marcus-w",
+        "name": "Marcus W.",
+        "role": "SHSU Junior · Bearkat Fan",
+        "quote": "Move-in was smooth, the leasing team answered every question, and the location is clutch — close enough for game days and late-night taco runs, far enough that I'm not hearing every party on campus.",
+        "rating": 5
+      },
+      {
+        "id": "priya-k",
+        "name": "Priya K.",
+        "role": "Nursing Student",
+        "quote": "My golden retriever and I both love it here. Pet-friendly grounds, respectful neighbors, and a quick drive to clinical rotations at the hospital. It genuinely feels like home, not just a lease.",
+        "rating": 5
+      },
+      {
+        "id": "lopez-family",
+        "name": "The López Family",
+        "role": "Transferred from Houston",
+        "quote": "We wanted newer construction without Houston traffic. The apartments are spacious, the neighborhood feels safe, and Huntsville State Park weekends have become our family tradition. Couldn't ask for more.",
+        "rating": 5
+      }
+    ]
+  }
+}

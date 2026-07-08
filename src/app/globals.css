@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@source "../components";
+@source "../app";
+
+@theme {
+  /* Valley teal — primary brand palette */
+  --color-forest-50: #f2f8f9;
+  --color-forest-100: #dcecef;
+  --color-forest-200: #b8d9df;
+  --color-forest-300: #86bfc9;
+  --color-forest-400: #529fab;
+  --color-forest-500: #3a8494;
+  --color-forest-600: #326d7c;
+  --color-forest-700: #2d5a68;
+  --color-forest-800: #294b57;
+  --color-forest-900: #274049;
+  --color-forest-950: #162930;
+
+  /* Warm stone neutrals */
+  --color-slate-warm-50: #faf7f2;
+  --color-slate-warm-100: #f0ebe3;
+  --color-slate-warm-200: #e2d9ce;
+  --color-slate-warm-300: #c9bdb0;
+  --color-slate-warm-400: #aa9b8c;
+  --color-slate-warm-500: #978876;
+  --color-slate-warm-600: #8a7968;
+  --color-slate-warm-700: #726458;
+  --color-slate-warm-800: #60554c;
+  --color-slate-warm-900: #504841;
+  --color-slate-warm-950: #2a2622;
+
+  --color-ivory: #faf7f2;
+  --color-charcoal: #1e2629;
+
+  /* Terracotta accent for highlights */
+  --color-accent-500: #c67a4a;
+  --color-accent-600: #b0663a;
+
+  --color-gold-300: #e8c878;
+  --color-gold-400: #d4a24a;
+  --color-gold-500: #c4923a;
+  --color-gold-600: #a67a2f;
+  --color-gold-700: #8a6428;
+
+  --color-sage-400: #8fb89a;
+  --color-sage-500: #6b9b7a;
+  --color-sage-600: #558264;
+  --color-sage-700: #446952;
+
+  --color-plum-500: #8b6b9e;
+  --color-plum-700: #6a4f7a;
+
+  --color-sky-500: #4a9fd4;
+  --color-sky-700: #2f7aab;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-accent-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/80 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-forest-900;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-forest-700 px-6 py-3 text-sm font-semibold text-forest-700 transition-all duration-200 hover:bg-forest-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-500 focus-visible:ring-offset-2;
+}
+
+.card {
+  @apply rounded-2xl bg-white shadow-sm ring-1 ring-slate-warm-200/60 transition-shadow duration-200 hover:shadow-md;
+}
+
+.section-padding {
+  @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+}
+
+.container-narrow {
+  @apply mx-auto max-w-7xl;
+}
+
+/* 3D flip cards — Explore Huntsville */
+.flip-scene {
+  perspective: 1200px;
+  height: 340px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-scene:hover .flip-inner,
+.flip-scene:focus-within .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-front {
+  transform: rotateY(0deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+    transform: none !important;
+  }
+
+  .flip-scene {
+    height: auto;
+    overflow: visible;
+  }
+
+  .flip-inner {
+    height: auto;
+    transform-style: flat;
+  }
+
+  .flip-face {
+    position: relative;
+    inset: auto;
+    transform: none;
+    backface-visibility: visible;
+  }
+
+  .flip-front {
+    display: none;
+  }
+
+  .flip-back {
+    min-height: 280px;
+  }
+}
