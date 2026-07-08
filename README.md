@@ -82,6 +82,24 @@ public/
 
 ## Deployment
 
+### Hostinger (GitHub → Node.js app)
+
+See **`deploy/HOSTINGER.md`** for hPanel settings (same pattern as tree.nuancedor.com).
+
+Quick settings:
+
+| Setting | Value |
+|---------|--------|
+| Repo | `rajmat2025/arkinthevalley` / `main` |
+| Install | `npm install` |
+| Build | `npm run build` |
+| Start | `node server.js` |
+| Node | 20.x |
+
+Set `NEXT_PUBLIC_WEB3FORMS_KEY` in hPanel before deploy. See `deploy/hostinger-hpanel.env.example`.
+
+### Other hosts
+
 Build and deploy to Vercel, Netlify, or any Node.js host:
 
 ```bash
