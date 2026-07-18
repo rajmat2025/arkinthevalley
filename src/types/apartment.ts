@@ -123,6 +123,11 @@ export interface Testimonials {
   reviews: Testimonial[];
 }
 
+export interface Integrations {
+  /** Web3Forms access key — can live in persistent data/apartmentData.json on Hostinger */
+  web3formsAccessKey?: string;
+}
+
 export interface ApartmentData {
   promotions: Promotions;
   community: Community;
@@ -135,4 +140,5 @@ export interface ApartmentData {
   gallery: GalleryImage[];
   faqs: FAQ[];
   testimonials: Testimonials;
+  integrations?: Integrations;
 }

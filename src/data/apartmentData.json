@@ -261,7 +261,7 @@
   "faqs": [
     {
       "q": "How to reach service/maintenance?",
-      "a": "Our apartment is managed by DCM (Davis Construction Management) Inc. 101 Hidden Valley Circle Huntsville, TX 77340. 936-291-6868 (Office) 936-581-0881 (Cell) email: kristy@dcmhuntsville.com"
+      "a": "PH: 936-577-5175 email: kristymmerman@yahoo.com address: 774 SH 19,Apt #6, Huntsville, TX 77320 "
     },
     {
       "q": "Are Private Bathrooms available?",
@@ -327,5 +327,8 @@
         "rating": 5
       }
     ]
+  },
+  "integrations": {
+    "web3formsAccessKey": ""
   }
 }

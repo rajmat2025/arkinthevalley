@@ -59,11 +59,23 @@ Redeploy replaces `nodejs/` only. **`data/apartmentData.json` is kept.**
 
 | Variable | Required? | Purpose |
 |----------|-------------|---------|
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | For contact form | Web3Forms access key ([web3forms.com](https://web3forms.com)) |
+| `WEB3FORMS_ACCESS_KEY` | For contact form | Web3Forms key ([web3forms.com](https://web3forms.com)) — server reads at runtime |
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | No | Legacy fallback only |
 | `APARTMENT_DATA_PATH` | No | Only if you need a custom data file path |
-| `NODE_ENV` | No | Usually set automatically |
 
-Without `NEXT_PUBLIC_WEB3FORMS_KEY`, the site loads but the contact form cannot send email.
+### Contact form without hPanel
+
+Add your Web3Forms access key to the **persistent** data file (same place as promos/FAQs):
+
+```json
+"integrations": {
+  "web3formsAccessKey": "your-key-from-web3forms.com"
+}
+```
+
+File: **`/files/data/apartmentData.json`** (beside `nodejs/`). No redeploy needed after adding the key — only restart the app if it was already running.
+
+Without a key, the site loads but the contact form returns a configuration error.
 
 ---
 
@@ -92,5 +104,5 @@ Without `NEXT_PUBLIC_WEB3FORMS_KEY`, the site loads but the contact form cannot 
 |---------|-----|
 | **503 / app won't start** | Start command should be `node server.js` |
 | **Content resets after redeploy** | Edit `/files/data/apartmentData.json`, not only inside `nodejs/` |
-| **Contact form fails** | Add `NEXT_PUBLIC_WEB3FORMS_KEY` in hPanel, then redeploy |
+| **Contact form fails** | Add `integrations.web3formsAccessKey` to `data/apartmentData.json` (get key at web3forms.com) |
 | **Build fails** | Run `npm run build` locally; fix errors; push to `main` |

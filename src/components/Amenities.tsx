@@ -34,7 +34,7 @@ const amenityMeta = [
     icon: ChefHat,
     title: "Full Kitchen Appliances",
     getDescription: () =>
-      "Every home comes equipped with a full suite of kitchen appliances.",
+      "Every home comes equipped with a full suite of kitchen appliances. Options available to add washer and dryer for a fee with monthly lease.",
   },
   {
     id: "quiet",

@@ -18,10 +18,10 @@ Open [http://localhost:3000](http://localhost:3000).
 Create a `.env.local` file in the project root:
 
 ```env
-NEXT_PUBLIC_WEB3FORMS_KEY=your_web3forms_access_key
+WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 ```
 
-Get a free access key at [web3forms.com](https://web3forms.com). The contact form uses this key to deliver lead submissions via email.
+Get a free access key at [web3forms.com](https://web3forms.com). On Hostinger, you can instead add the key to **`data/apartmentData.json`** → `integrations.web3formsAccessKey` (no hPanel needed).
 
 ## Updating Content
 

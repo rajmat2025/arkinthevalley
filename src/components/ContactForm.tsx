@@ -40,6 +40,7 @@ export default function ContactForm({
     {}
   );
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const { prefersReducedMotion } = useMotionSafe();
   const motionProps = getMotionProps(prefersReducedMotion);
 
@@ -62,40 +63,39 @@ export default function ContactForm({
     e.preventDefault();
     if (!validate()) return;
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-    if (!accessKey) {
-      setStatus("error");
-      return;
-    }
-
     setStatus("loading");
+    setErrorMessage("");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: accessKey,
-          subject: `New inquiry — ${community.name}`,
-          from_name: form.name,
           name: form.name,
           email: form.email,
           phone: form.phone,
-          floor_plan: form.floorPlan || "Not specified",
-          move_in_date: form.moveInDate || "Not specified",
+          floorPlan: form.floorPlan,
+          moveInDate: form.moveInDate,
           message: form.message,
         }),
       });
 
       const data = await response.json();
-      if (data.success) {
+      if (response.ok && data.success) {
         setStatus("success");
         setForm(initialForm);
         setErrors({});
       } else {
+        setErrorMessage(
+          data.message ||
+            "Something went wrong. Please try again or contact us directly."
+        );
         setStatus("error");
       }
     } catch {
+      setErrorMessage(
+        "Unable to reach the server. Please try again or contact us directly."
+      );
       setStatus("error");
     }
   };
@@ -319,6 +319,7 @@ export default function ContactForm({
               >
                 <AlertCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
                 Something went wrong. Please try again or contact us directly.
+                {errorMessage ? ` ${errorMessage}` : ""}
               </div>
             )}
 
