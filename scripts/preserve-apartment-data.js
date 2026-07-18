@@ -99,6 +99,10 @@ function ensureSymlink(deployFile, persistentPath) {
 
   fs.symlinkSync(persistentPath, deployFile);
   console.log(`[preserve-data] Linked ${deployFile} -> ${persistentPath}`);
+
+  if (!process.env.APARTMENT_DATA_PATH) {
+    process.env.APARTMENT_DATA_PATH = persistentPath;
+  }
 }
 
 function main() {
@@ -110,7 +114,7 @@ function main() {
 
   const persistentPath = defaultPersistentPath(cwd);
   if (!persistentPath) {
-    console.log("[preserve-data] Set APARTMENT_DATA_PATH in hPanel for persistent content storage");
+    console.log("[preserve-data] Not a Hostinger nodejs deploy — using bundled src/data/");
     return;
   }
 
@@ -135,9 +139,6 @@ function main() {
   ensureSymlink(deployFile, persistentPath);
 
   console.log(`[preserve-data] Storage: ${persistentPath}`);
-  if (!process.env.APARTMENT_DATA_PATH) {
-    console.log(`[preserve-data] Set hPanel env APARTMENT_DATA_PATH=${persistentPath}`);
-  }
 }
 
 main();

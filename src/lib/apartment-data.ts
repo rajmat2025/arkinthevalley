@@ -3,9 +3,18 @@ import path from "path";
 import bundledData from "@/data/apartmentData.json";
 import type { ApartmentData } from "@/types/apartment";
 
+function hostingerPersistentPath(cwd: string): string | null {
+  const match = cwd.match(/^(.*\/domains\/[^/]+)\/nodejs\/?$/);
+  if (!match) return null;
+  return path.join(match[1], "data", "apartmentData.json");
+}
+
 function resolveDataPath(): string {
   const envPath = process.env.APARTMENT_DATA_PATH?.trim();
   if (envPath) return path.resolve(envPath);
+
+  const hostingerPath = hostingerPersistentPath(process.cwd());
+  if (hostingerPath) return hostingerPath;
 
   return path.join(process.cwd(), "src", "data", "apartmentData.json");
 }

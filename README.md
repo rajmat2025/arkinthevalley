@@ -27,7 +27,7 @@ Get a free access key at [web3forms.com](https://web3forms.com). The contact for
 
 All editable site data lives in **`src/data/apartmentData.json`** (local dev).
 
-**On Hostinger:** edit the persistent file at **`/domains/<your-site>/data/apartmentData.json`**, not `nodejs/src/data/`. See `deploy/HOSTINGER.md`.
+**On Hostinger:** edit **`data/apartmentData.json`** in File Manager (same level as the `nodejs/` folder). No hPanel env vars needed — see `deploy/HOSTINGER.md`.
 
 - Promotions banner (toggle, text, expiry)
 - Community contact info (phone, email, office hours)
@@ -95,7 +95,7 @@ Quick settings:
 | Repo | `rajmat2025/arkinthevalley` / `main` |
 | Install | `npm install` |
 | Build | `npm run build` |
-| Start | `node start-with-data.js` |
+| Start | `node server.js` (data persistence is automatic) |
 | Node | 20.x |
 
 Set `NEXT_PUBLIC_WEB3FORMS_KEY` in hPanel before deploy. See `deploy/hostinger-hpanel.env.example`.
