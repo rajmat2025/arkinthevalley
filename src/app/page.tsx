@@ -10,13 +10,13 @@ import FAQSection from "@/components/FAQSection";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import apartmentData from "@/data/apartmentData.json";
+import { getApartmentData } from "@/lib/apartment-data";
 import { isPromotionActive } from "@/lib/promotions";
-import type { ApartmentData } from "@/types/apartment";
 
-const data = apartmentData as ApartmentData;
+export const dynamic = "force-dynamic";
 
 export default function Home() {
+  const data = getApartmentData();
   const showPromo = isPromotionActive(data.promotions);
 
   return (

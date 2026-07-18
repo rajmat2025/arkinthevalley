@@ -1,17 +1,17 @@
 {
   "promotions": {
     "isActive": true,
-    "bannerText": "🎉 $100 Off — Sign a 12-Month Lease Today! 🎉",
-    "offerAmount": 100,
-    "offerDescription": "$100 off your first month when you sign a 1-year lease",
+    "bannerText": "🎉 $50 Off — Sign a 12-Month Lease Today! 🎉",
+    "offerAmount": 50,
+    "offerDescription": "$50 off your first month when you sign a 1-year lease",
     "leaseTermRequired": "12-month",
     "endDate": "Limited time offer",
     "expiresOn": "2026-09-30"
   },
   "community": {
     "name": "Ark in the Valley",
-    "phone": "978-853-6279",
-    "email": "rpm2k9@gmail.com",
+    "phone": "936-577-5175",
+    "email": "kristymmerman@yahoo.com",
     "address": "774 SH 19, Huntsville, TX 77320",
     "officeHours": "Mon–Fri: 9AM–5PM | Sat: By appointment",
     "unitCount": 72,
@@ -44,7 +44,7 @@
       { "label": "Apartment Homes", "value": "72" },
       { "label": "To SHSU", "value": "6 min" },
       { "label": "Community Built", "value": "2021" },
-      { "label": "Move-In Special", "value": "$100 Off" }
+      { "label": "Move-In Special", "value": "$50 Off" }
     ],
     "cards": [
       {

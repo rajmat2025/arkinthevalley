@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/embed-data-preserver-in-standalone.js",
     "start": "next start",
     "lint": "next lint"
   },
