@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
+import { getApartmentData } from "@/lib/apartment-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,19 +34,21 @@ export const metadata: Metadata = {
   },
 };
 
+const data = getApartmentData();
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ApartmentComplex",
-  name: "Ark in the Valley",
+  name: data.community.name,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "774 SH 19",
+    streetAddress: "774 SH 19, Apt #6",
     addressLocality: "Huntsville",
     addressRegion: "TX",
     postalCode: "77320",
     addressCountry: "US",
   },
-  telephone: "978-853-6279",
+  telephone: data.community.phone,
   geo: {
     "@type": "GeoCoordinates",
     latitude: 30.7238,

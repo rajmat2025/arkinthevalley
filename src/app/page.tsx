@@ -33,11 +33,16 @@ export default function Home() {
         <FloorPlans floorPlans={data.floorPlans} />
         <Gallery images={data.gallery} />
         <Amenities leasingInfo={data.leasingInfo} />
-        <LocationMap content={data.locationContent} />
+        <LocationMap content={data.locationContent} address={data.community.address} />
         <FAQSection faqs={data.faqs} />
         <ContactForm
           community={data.community}
           floorPlans={data.floorPlans}
+          web3formsAccessKey={
+            process.env.WEB3FORMS_ACCESS_KEY?.trim() ||
+            process.env.NEXT_PUBLIC_WEB3FORMS_KEY?.trim() ||
+            data.integrations?.web3formsAccessKey
+          }
         />
         <Testimonials content={data.testimonials} />
       </main>

@@ -19,6 +19,7 @@ import {
 
 interface LocationMapProps {
   content: LocationContent;
+  address: string;
 }
 
 const iconMap = {
@@ -30,12 +31,11 @@ const iconMap = {
   "Huntsville Memorial Hospital": Hospital,
 };
 
-export default function LocationMap({ content }: LocationMapProps) {
+export default function LocationMap({ content, address }: LocationMapProps) {
   const { prefersReducedMotion } = useMotionSafe();
   const motionProps = getMotionProps(prefersReducedMotion);
 
-  const mapSrc =
-    "https://maps.google.com/maps?q=774+SH+19,+Huntsville,+TX+77320&output=embed";
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
   return (
     <section id="location" className="section-padding bg-ivory">
@@ -63,7 +63,7 @@ export default function LocationMap({ content }: LocationMapProps) {
           >
             <iframe
               src={mapSrc}
-              title="Map showing Ark in the Valley at 774 SH 19, Huntsville, TX 77320"
+              title={`Map showing Ark in the Valley at ${address}`}
               className="aspect-[4/3] h-full min-h-[320px] w-full border-0 lg:min-h-[480px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -80,7 +80,7 @@ export default function LocationMap({ content }: LocationMapProps) {
           >
             <div className="mb-6 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-warm-200/60">
               <h3 className="text-lg font-semibold text-forest-900">
-                774 SH 19, Huntsville, TX 77320
+                {address}
               </h3>
               <p className="mt-2 text-slate-warm-600">
                 Your gateway to SHSU, downtown festivals, state park weekends,

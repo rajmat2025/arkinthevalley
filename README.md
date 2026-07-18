@@ -1,6 +1,6 @@
 # Ark in the Valley — Website
 
-Modern, responsive marketing site for **Ark in the Valley**, a 72-unit apartment community at 774 SH 19, Huntsville, TX 77320.
+Modern, responsive marketing site for **Ark in the Valley**, a 72-unit apartment community at 774 SH 19, Apt #6, Huntsville, TX 77320.
 
 Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion.
 

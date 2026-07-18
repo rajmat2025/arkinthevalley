@@ -9,6 +9,7 @@ import { useMotionSafe, fadeUpItem, getMotionProps } from "@/lib/motion";
 interface ContactFormProps {
   community: Community;
   floorPlans: FloorPlan[];
+  web3formsAccessKey?: string;
 }
 
 interface FormData {
@@ -34,6 +35,7 @@ const initialForm: FormData = {
 export default function ContactForm({
   community,
   floorPlans,
+  web3formsAccessKey,
 }: ContactFormProps) {
   const [form, setForm] = useState<FormData>(initialForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>(
@@ -63,24 +65,49 @@ export default function ContactForm({
     e.preventDefault();
     if (!validate()) return;
 
+    if (!web3formsAccessKey?.trim()) {
+      setErrorMessage(
+        "Contact form is not configured yet. Add integrations.web3formsAccessKey to apartmentData.json."
+      );
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
+          access_key: web3formsAccessKey.trim(),
+          subject: `New inquiry — ${community.name}`,
+          from_name: form.name,
           name: form.name,
           email: form.email,
+          replyto: form.email,
           phone: form.phone,
-          floorPlan: form.floorPlan,
-          moveInDate: form.moveInDate,
+          floor_plan: form.floorPlan || "Not specified",
+          move_in_date: form.moveInDate || "Not specified",
           message: form.message,
         }),
       });
 
-      const data = await response.json();
+      let data: { success?: boolean; message?: string } = {};
+      try {
+        data = await response.json();
+      } catch {
+        setErrorMessage(
+          "Unexpected response from email service. Please try again or contact us directly."
+        );
+        setStatus("error");
+        return;
+      }
+
       if (response.ok && data.success) {
         setStatus("success");
         setForm(initialForm);
@@ -94,7 +121,7 @@ export default function ContactForm({
       }
     } catch {
       setErrorMessage(
-        "Unable to reach the server. Please try again or contact us directly."
+        "Unable to reach the email service. Please try again or contact us directly."
       );
       setStatus("error");
     }

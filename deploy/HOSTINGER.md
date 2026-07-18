@@ -73,9 +73,9 @@ Add your Web3Forms access key to the **persistent** data file (same place as pro
 }
 ```
 
-File: **`/files/data/apartmentData.json`** (beside `nodejs/`). No redeploy needed after adding the key — only restart the app if it was already running.
+The form submits **from the visitor's browser** to Web3Forms (required on the free plan). The key is passed from your JSON at page load — no hPanel env vars needed.
 
-Without a key, the site loads but the contact form returns a configuration error.
+In Web3Forms dashboard, allow your production domain (and `localhost` for local testing).
 
 ---
 
